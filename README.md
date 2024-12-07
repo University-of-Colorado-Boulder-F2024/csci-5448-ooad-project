@@ -17,6 +17,7 @@ Through hands-on examples and benchmarking, this project highlights the trade-of
 
 ## *Folder Structure*
 
+plaintext
 project-root/
 ├── src/
 │   ├── main/
@@ -37,6 +38,11 @@ project-root/
 │   │   ├── Polymorphism.py         # Demonstrates polymorphism in TensorFlow
 │   │   ├── tensorflow_performance_analysis.py # TensorFlow performance benchmarking
 │   │   ├── test_performance_analysis.py  # Unit tests for Python code
+
+
+
+
+
 ---
 
 ## *Prerequisites*
@@ -131,7 +137,7 @@ implementation 'org.deeplearning4j:deeplearning4j-core:1.0.0-M2'
    - *Inheritance:* Run RandomForestInheritanceModel.java.
      bash
      java -cp deeplearning4j-core.jar;. ooad.dl4j.RandomForestInheritanceModel
-
+     
    - *Performance Benchmarking:* Run DL4JBenchmark.java.
 
 *Outputs:*
