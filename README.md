@@ -1,23 +1,27 @@
-# *OOAD Comparison of TensorFlow and DL4J*
 
-## *Project Overview*
-This repository contains the code, analysis, and performance benchmarks for comparing the object-oriented design (OOD) implementations in *TensorFlow* (Python) and *DL4J* (Java). The project focuses on core object-oriented principles such as:
-- *Encapsulation*
-- *Polymorphism*
-- *Inheritance*
-
-It evaluates their impact on key performance metrics:
-- *Memory usage*
-- *Training time*
-- *Prediction time*
-
-Through hands-on examples and benchmarking, this project highlights the trade-offs between *flexibility* (TensorFlow) and *structure* (DL4J) in object-oriented programming for machine learning frameworks.
 
 ---
 
-## *Folder Structure*
+# **OOAD Comparison of TensorFlow and DL4J**
 
-plaintext
+## **Project Overview**
+This repository contains the code, analysis, and performance benchmarks for comparing the object-oriented design (OOD) implementations in **TensorFlow** (Python) and **DL4J** (Java). The project focuses on core object-oriented principles such as:
+- **Encapsulation**
+- **Polymorphism**
+- **Inheritance**
+
+It evaluates their impact on key performance metrics:
+- **Memory usage**
+- **Training time**
+- **Prediction time**
+
+Through hands-on examples and benchmarking, this project highlights the trade-offs between **flexibility** (TensorFlow) and **structure** (DL4J) in object-oriented programming for machine learning frameworks.
+
+---
+
+## **Folder Structure**
+
+```plaintext
 project-root/
 ├── src/
 │   ├── main/
@@ -41,36 +45,36 @@ project-root/
 
 
 
-
+```
 
 ---
 
-## *Prerequisites*
+## **Prerequisites**
 
-### *For TensorFlow (Python)*
-- *Python Version:* Python 3.8 or later  
-- *Required Libraries:*
+### **For TensorFlow (Python)**
+- **Python Version:** Python 3.8 or later  
+- **Required Libraries:**
   - TensorFlow Decision Forests
   - Pandas
   - Matplotlib
   - Psutil
 
-*Install the dependencies:*
-bash
+**Install the dependencies:**
+```bash
 pip install tensorflow_decision_forests pandas matplotlib psutil
-
+```
 
 ---
 
-### *For DL4J (Java)*
-- *Java Version:* JDK 11 or later  
-- *Build Tool:* Maven or Gradle  
-- *Dependency Management:*
+### **For DL4J (Java)**
+- **Java Version:** JDK 11 or later  
+- **Build Tool:** Maven or Gradle  
+- **Dependency Management:**
 
-Add the following DL4J dependency to your pom.xml (Maven) or build.gradle (Gradle):
+Add the following DL4J dependency to your `pom.xml` (Maven) or `build.gradle` (Gradle):
 
-*Maven:*
- xml
+**Maven:**
+ ```xml
   <dependency>
       <groupId>org.deeplearning4j</groupId>
       <artifactId>deeplearning4j-core</artifactId>
@@ -81,77 +85,77 @@ Add the following DL4J dependency to your pom.xml (Maven) or build.gradle (Gradl
       <artifactId>jfreechart</artifactId>
       <version>1.5.3</version>
   </dependency>
-  
+  ```
 
-*Gradle:*
-gradle
+**Gradle:**
+```gradle
 implementation 'org.deeplearning4j:deeplearning4j-core:1.0.0-M2'
-
+```
 
 ---
 
-## *How to Run*
+## **How to Run**
 
-### *TensorFlow Scripts*
-1. *Navigate to the TensorFlow directory:*
-   bash
+### **TensorFlow Scripts**
+1. **Navigate to the TensorFlow directory:**
+   ```bash
    cd src/tensorflow
-   
-2. *Run the desired script:*
-   - *Encapsulation:*
-     bash
+   ```
+2. **Run the desired script:**
+   - **Encapsulation:**
+     ```bash
      python Encapsulation.py
-     
-   - *Polymorphism:*
-     bash
+     ```
+   - **Polymorphism:**
+     ```bash
      python Polymorphism.py
-     
-   - *Inheritance:*
-     bash
+     ```
+   - **Inheritance:**
+     ```bash
      python Inheritance.py
-     
-   - *Performance Analysis:*
-     bash
+     ```
+   - **Performance Analysis:**
+     ```bash
      python tensorflow_performance_analysis.py
-     
+     ```
      This script outputs:
-     - *Performance metrics:* Training time, memory usage, and prediction time.
-     - *Graph:* tensorflow_performance_analysis.png.
+     - **Performance metrics:** Training time, memory usage, and prediction time.
+     - **Graph:** `tensorflow_performance_analysis.png`.
 
 ---
 
-### *DL4J Scripts*
-1. *Compile the Java files:*
-   bash
+### **DL4J Scripts**
+1. **Compile the Java files:**
+   ```bash
    javac -cp deeplearning4j-core.jar;. ooad/dl4j/*.java
-   
-2. *Run the desired file:*
-   - *Encapsulation:* Run RandomForestModel.java.
-     bash
+   ```
+2. **Run the desired file:**
+   - **Encapsulation:** Run `RandomForestModel.java`.
+     ```bash
      java -cp deeplearning4j-core.jar;. ooad.dl4j.RandomForestModel
-     
-   - *Polymorphism:* Run DenseLayerModel.java.
-     bash
+     ```
+   - **Polymorphism:** Run `DenseLayerModel.java`.
+     ```bash
      java -cp deeplearning4j-core.jar;. ooad.dl4j.DenseLayerModel
-     
-   - *Inheritance:* Run RandomForestInheritanceModel.java.
-     bash
+     ```
+   - **Inheritance:** Run `RandomForestInheritanceModel.java`.
+     ```bash
      java -cp deeplearning4j-core.jar;. ooad.dl4j.RandomForestInheritanceModel
-     
-   - *Performance Benchmarking:* Run DL4JBenchmark.java.
+     ```
+   - **Performance Benchmarking:** Run `DL4JBenchmark.java`.
 
-*Outputs:*
-- *Performance metrics:* Training time, memory usage, and prediction time.
-- *Graph:* DL4J_performance_analysis.png.
+**Outputs:**
+- **Performance metrics:** Training time, memory usage, and prediction time.
+- **Graph:** `DL4J_performance_analysis.png`.
 
 ---
 
-## *Example Outputs*
+## **Example Outputs**
 
-### *TensorFlow Outputs*
+### **TensorFlow Outputs**
 
-#### *Encapsulation.py*
-plaintext
+#### **Encapsulation.py**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> python Encapsulation.py
 Encapsulation Example:
 Model trained successfully.
@@ -168,32 +172,32 @@ Predictions:
  [1]
  ...
 ]
+```
 
-
-#### *Polymorphism.py*
-plaintext
+#### **Polymorphism.py**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> python Polymorphism.py
 Polymorphism Example:
 Model A Output:
 [[0.551245  0.742198 ...]]
 Model B Output:
 [[0.712198  0.482137 ...]]
+```
 
-
-#### *Inheritance.py*
-plaintext
+#### **Inheritance.py**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> python Inheritance.py
 Inheritance Example:
 tf.Tensor(
 [[0.451785  0.242157 ...]])
-
+```
 
 ---
 
-### *DL4J Outputs*
+### **DL4J Outputs**
 
-#### *RandomForestModel.java*
-plaintext
+#### **RandomForestModel.java**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> java -cp deeplearning4j-core.jar;. ooad.dl4j.RandomForestModel
 
 Building Random Forest Model with 10 trees and max depth 5
@@ -206,10 +210,10 @@ Predictions:
  [0.789, 0.211],
  ...
  [0.234, 0.766]]
+```
 
-
-#### *DenseLayerModel.java*
-plaintext
+#### **DenseLayerModel.java**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> java -cp deeplearning4j-core.jar;. ooad.dl4j.DenseLayerModel
 
 Initializing Dense Layer Model with input size 10 and output size 2
@@ -220,10 +224,10 @@ Predictions:
  [0.501, 0.499],
  ...
  [0.612, 0.388]]
+```
 
-
-#### *RandomForestInheritanceModel.java*
-plaintext
+#### **RandomForestInheritanceModel.java**
+```plaintext
 PS C:\Users\softy\Downloads\csci-5448-compilecrew-ooad-project-main> java -cp deeplearning4j-core.jar;. ooad.dl4j.RandomForestInheritanceModel
 
 Building Random Forest Inheritance Model...
@@ -234,34 +238,34 @@ Epoch 3 complete.
 Epoch 4 complete.
 Epoch 5 complete.
 Training complete.
-
+```
 ## Running Unit Tests
 
 ### Python Unit Tests:
 1. Ensure you are in the TensorFlow directory:
-   bash
+   ```bash
    cd tensorflow
-   
+   ```
 2. Run the unit tests:
-   bash
+   ```bash
    python -m unittest test_performance_analysis.py
-   
+   ```
 3. Example Output:
-   plaintext
+   ```plaintext
    .....
    ----------------------------------------------------------------------
    Ran 5 tests in 0.452s
 
    OK
-   
+   ```
 
 ### Java Unit Tests:
 1. Run the unit tests using Maven:
-   bash
+   ```bash
    mvn test
-   
+   ```
 2. Example Output:
-   plaintext
+   ```plaintext
    [INFO] Scanning for projects...
    -------------------------------------------------------
     T E S T S
@@ -274,7 +278,7 @@ Training complete.
    Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
 
    [INFO] BUILD SUCCESS
-   
+   ```
 
 ---
 
@@ -286,32 +290,36 @@ Training complete.
 
 ---
 
-## *Results and Analysis*
+## **Results and Analysis**
 
-### *Memory Usage*
-- *TensorFlow:* Consumes more memory due to Python's dynamic memory allocation.
-- *DL4J:* More memory-efficient, benefiting from Java's strict memory management.
+### **Memory Usage**
+- **TensorFlow:** Consumes more memory due to Python's dynamic memory allocation.
+- **DL4J:** More memory-efficient, benefiting from Java's strict memory management.
 
-### *Training Time*
-- *TensorFlow:* Faster for smaller datasets, making it ideal for prototyping.
-- *DL4J:* Scales better for larger datasets and complex models.
+### **Training Time**
+- **TensorFlow:** Faster for smaller datasets, making it ideal for prototyping.
+- **DL4J:** Scales better for larger datasets and complex models.
 
-### *Prediction Time*
-- *DL4J:* Demonstrates faster and more consistent predictions due to its compiled nature.
-- *TensorFlow:* Slightly slower predictions due to runtime overhead.
+### **Prediction Time**
+- **DL4J:** Demonstrates faster and more consistent predictions due to its compiled nature.
+- **TensorFlow:** Slightly slower predictions due to runtime overhead.
 
-### *Graphical Comparison*
+### **Graphical Comparison**
 - Performance graphs:
-  - *TensorFlow:* Tensorflow_performance_analysis.png
-  - *DL4J:* DL4J_performance_analysis.png
+  - **TensorFlow:** `Tensorflow_performance_analysis.png`
+  - **DL4J:** `DL4J_performance_analysis.png`
 
 ---
 
-## *Contributors*
-- *Anchal Basia* (anchal.basia@colorado.edu)  
-- *Dharini Baskaran* (dharini.baskaran@colorado.edu)
+## **Contributors**
+- **Anchal Basia** (anchal.basia@colorado.edu)  
+- **Dharini Baskaran** (dharini.baskaran@colorado.edu)
 
 ---
 
-## *Acknowledgments*
-This project was developed as part of the *Object-Oriented Analysis and Design (OOAD)* course at the *University of Colorado, Boulder*. Special thanks to the faculty for their guidance and support.
+## **Acknowledgments**
+This project was developed as part of the **Object-Oriented Analysis and Design (OOAD)** course at the **University of Colorado, Boulder**. Special thanks to the faculty for their guidance and support.
+
+
+
+
